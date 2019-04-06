@@ -1,9 +1,7 @@
 #!/bin/bash
-
 # Copyright - syaidagil
 
 clear
-
 # warna
 f=3 b=4s
 for j in f b; do
@@ -11,7 +9,6 @@ for j in f b; do
     printf -v $j$i %b "\e[${!j}${i}m"
   done
 done
-
 
 echo ""
 echo ${f6} "               ███████╗██╗   ██╗ █████╗ ██╗██████╗ "
@@ -28,23 +25,24 @@ echo ""
 echo " ${f6}1) ${f1}aircrack"
 echo " ${f6}2) ${f1}Red Hawk"
 echo " ${f6}3) ${f1}TheFatRat"
-echo " ${f6}4) ${f1}Crascan"
+echo " ${f6}4) ${f1}YahooCloning"
+echo " ${f6}5) ${f1}Crascan"
 echo " ${f6}100) ${f1}exit"
 echo ""
 echo -e ${f6}" [${f1}Pilih Nomor${f6}]"
-read -p " ──►:> " act;
+read -p " --> " syaid;
 
-if [ $act = 1 ] || [ $act = 1 ]
+if [ $syaid = 1 ] || [ $syaid = 1 ]
 then
 clear
 echo " installing aircrack-ng "
 sleep 1
 apt-get update && apt-get upgrade
 apt-get install aircrack-ng
-echo "Done gan "
+echo " Done ya su "
 fi
 
-if [ $act = 2 ] || [ $act = 2 ]
+if [ $syaid = 2 ] || [ $syaid = 2 ]
 then
 clear
 echo " Installing Red Hawk "
@@ -53,10 +51,10 @@ apt update && apt upgrade
 apt install php
 apt install git
 git clone https://github.com/Tuhinshubhra/RED_HAWK
-echo " Done gan "
+echo " Done ya su "
 fi
 
-if [ $act = 3 ] || [ $act = 3 ]
+if [ $syaid = 3 ] || [ $syaid = 3 ]
 then
 clear
 echo " installing TheFatRat "
@@ -67,10 +65,23 @@ git clone https://github.com/Screetsec/TheFatRat.git
 cd TheFatRat
 chmod +x setup.sh && ./setup.sh
 sleep 1
-echo " Done gan "
+echo " Done ya su "
 fi
 
-if [ $act = 4 ] || [ $act = 4 ]
+if [ $syaid = 4 ] || [ $syaid = 4 ]
+then
+clear
+echo " Installing YahooCloning "
+sleep 1
+apt update && apt upgrade
+apt install git
+git clone https://github.com/syaidagil/YahooClon
+cd YahooClon
+chmod +x clon.py && python2 clon.py
+echo " Done ya su "
+fi
+
+if [ $syaid = 5 ] || [ $syaid = 5 ]
 then
 clear
 echo " Installing Crascan "
@@ -80,16 +91,14 @@ apt install git
 git clone https://github.com/aryanrtm/Crascan
 cd Crascan
 chmod +x crascan.sh && ./crascan.sh
-echo " Done gan "
+echo " Done ya su "
 fi
 
-if [ $act = 100 ] || [ $act = 100 ]
+if [ $syaid = 100 ] || [ $syaid = 100 ]
 then
 echo " IG : @syaidagil "
 sleep 1
 echo " contact : syaidagil21@gmail.com "
-sleep 1
-echo " FB : syaidagil"
-sleep 1
+sleep 2
 exit
 fi
